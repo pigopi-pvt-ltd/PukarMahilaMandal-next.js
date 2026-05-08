@@ -79,7 +79,7 @@ export default function Donate() {
 
           {/* --- RIGHT: DONATION FORM --- */}
           <div className="lg:col-span-5 mt-0">
-            <div className="bg-teal-950 rounded-lg p-4 md:p-12 text-white sticky top-28 shadow-2xl shadow-teal-950/40">
+            <div className="bg-teal-950 rounded-lg p-4 md:p-12 text-white sticky top-28 shadow-2xl shadow-teal-950/40 border-2">
               <div className="space-y-8">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-black">Donation Details</h3>
@@ -117,21 +117,21 @@ export default function Donate() {
                         <div className="flex justify-between items-center bg-black/20 p-3 rounded-lg">
                           <span className="text-white/40">A/C No:</span>
                           <span className="font-mono font-bold flex items-center gap-2">
-                            91802008812XXXX
-                            <button onClick={() => copyToClipboard("91802008812XXXX")} className="text-rose-400 hover:text-white">
+                            889010210000025
+                            <button onClick={() => copyToClipboard("889010210000025")} className="text-rose-400 hover:text-white">
                               <Copy size={14} />
                             </button>
                           </span>
                         </div>
                         <div className="flex justify-between items-center bg-black/20 p-3 rounded-lg">
                           <span className="text-white/40">IFSC Code:</span>
-                          <span className="font-mono font-bold uppercase">UTIB0000XXX</span>
+                          <span className="font-mono font-bold uppercase">BKID0008890</span>
                         </div>
                       </div>
                     </div>
 
                     <button className="w-full bg-rose-600 hover:bg-rose-700 py-5 rounded-lg font-black text-lg shadow-xl shadow-rose-900/40 transition-all flex items-center justify-center gap-3">
-                      Donate with UPI/Card <ArrowRight size={20} />
+                      Donate<ArrowRight size={20} />
                     </button>
                   </div>
 

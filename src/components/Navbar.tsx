@@ -48,15 +48,16 @@ const Navbar = () => {
       <div className="bg-teal-950 text-zinc-300 py-1 hidden md:block border-b border-white/5">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6 flex justify-between items-center text-xs md:text-sm font-bold uppercase tracking-wider">
           <div className="flex gap-6">
-            <div className="flex items-center gap-1.5">
-              <Phone size={14} />
-              <div className="flex gap-1.5">
-                <a href="tel:+919131931137" className="hover:text-rose-400 transition-colors">+91 91319 31137</a>
-                <span className="text-white/30">,</span>
-                <a href="tel:+919685070307" className="hover:text-rose-400 transition-colors">96850 70307</a>
-              </div>
+            <div className="flex items-center gap-4">
+              <a href="tel:+919131931137" className="flex items-center gap-1.5 hover:text-rose-400 transition-colors">
+                <Phone size={14} /> +91 91319 31137
+              </a>
+              <a href="tel:+919685070307" className="flex items-center gap-1.5 hover:text-rose-400 transition-colors">
+                <Phone size={14} /> +91 96850 70307
+              </a>
             </div>
-            <a href="mailto:info@pukarmandal.org" className="flex items-center gap-1.5 hover:text-rose-400 transition-colors"><Mail size={14} /> info@pukarmandal.org</a>
+            <a href="mailto:pukarmahilamandalguna@gmail.com" className="flex items-center gap-1.5 hover:text-rose-400 transition-colors"><Mail size={14} /> pukarmahilamandalguna@gmail.com</a>
+            <a href="mailto:rs4038990@gmail.com" className="flex items-center gap-1.5 hover:text-rose-400 transition-colors"><Mail size={14} /> rs4038990@gmail.com</a>
           </div>
           <div className="flex items-center gap-5">
             <div className="flex gap-3.5 border-r border-white/10 pr-5">

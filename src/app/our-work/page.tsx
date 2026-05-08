@@ -80,7 +80,7 @@ export default function OurWork() {
       bg: "bg-teal-50",
     },
     {
-      title: "Handmade Papad Production",
+      title: "Herbal handmade product production",
       icon: UtensilsCrossed,
       description: "Empowering rural households through a decentralized production model. We combine traditional recipes with modern quality control.",
       longDescription: "Our flagship unit in Guna focuses on authentic sun-drying techniques. By providing raw materials to women's doorsteps, we ensure they can balance livelihood with family care.",

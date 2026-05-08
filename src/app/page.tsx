@@ -13,24 +13,28 @@ import {
 // --- Hero Carousel Content  ---
 const slides = [
   {
-    image: "/first.png",
+    image: "/images/home/banner1.png",
     title: "Empowering Rural Women, Changing Lives.",
   },
   {
-    image: "/images/home/Fashion-Design-blog.jpg",
+    image: "/images/home/banner3.png",
     title: "Economic Freedom Through Skill Training.",
   },
   {
-    image: "/images/services/Garment_Manufacturing.webp",
+    image: "/images/home/banner2.png",
     title: "Legal Literacy and Social Excellence.",
   },
   {
-    image: "/images/home/image-4.jpg",
+    image: "/images/home/banner4.png",
     title: "Sustainable Livelihoods Since 2017.",
   },
   {
-    image: "/images/home/image-7.jpg",
+    image: "/images/home/banner5.png",
     title: "Building Self-Reliant Communities.",
+  },
+  {
+    image: "/images/home/banner6.png",
+    title: "Leadership and Growth for Every Woman.",
   },
 ];
 
@@ -40,35 +44,35 @@ const campaigns = [
     title: "10 New Garment Training Units",
     goal: "Goal: ₹10 Lakhs",
     raised: "45%",
-    image: "/images/home/image-4.jpg",
+    image: "/images/campaigns/garment.png",
     link: "/donate",
   },
   {
     title: "Rural Legal Literacy Camps",
     goal: "Goal: ₹5 Lakhs",
     raised: "30%",
-    image: "/images/home/empowerment-of-women.jpg",
+    image: "/images/campaigns/legal.png",
     link: "/donate",
   },
   {
     title: "Herbal Soap Expansion",
     goal: "Goal: ₹3 Lakhs",
     raised: "60%",
-    image: "/images/home/image-5.jpg",
+    image: "/images/campaigns/soap.png",
     link: "/donate",
   },
   {
     title: "Women's Safety Workshops",
     goal: "Goal: ₹2 Lakhs",
     raised: "75%",
-    image: "/images/home/image-3.webp",
+    image: "/images/campaigns/safety.png",
     link: "/donate",
   },
   {
     title: "Digital Literacy for SHGs",
     goal: "Goal: ₹4 Lakhs",
     raised: "20%",
-    image: "/images/home/image-4.jpg",
+    image: "/images/campaigns/digital.png",
     link: "/donate",
   },
 ];
@@ -79,6 +83,38 @@ const awards = [
   { title: "NITI Aayog Verified", year: "2024", desc: "Registered under Darpan Portal with unique ID.", icon: Award },
   { title: "CSR Excellence", year: "2023", desc: "Best grassroots NGO for women empowerment.", icon: Star },
   { title: "Financial Inclusion Champion", year: "2023", desc: "100% SHG bank linkage achievement.", icon: Target },
+];
+
+// --- Field Reports Data ---
+const fieldReports = [
+  {
+    image: "meet1 (1).jpeg",
+    date: "May 20, 2026",
+    tag: "Field Report",
+    title: "Republic Day Honors for Area Level Federation",
+    desc: "Recognized for 100% implementation of women welfare schemes in remote Guna blocks."
+  },
+  {
+    image: "swachhta.jpeg",
+    date: "May 15, 2026",
+    tag: "Swachhta Mission",
+    title: "Swachhta Abhiyan in Guna Villages",
+    desc: "Rural women leading cleanliness drives and waste management initiatives for a cleaner India."
+  },
+  {
+    image: "meet1 (2).jpeg",
+    date: "May 10, 2026",
+    tag: "Field Report",
+    title: "Community Meeting on Economic Freedom",
+    desc: "Discussing new production centers and fair wage systems for rural artisans."
+  },
+  {
+    image: "meet1 (3).jpeg",
+    date: "May 05, 2026",
+    tag: "Field Report",
+    title: "Legal Literacy Camp Success",
+    desc: "Over 200 women attended the legal awareness workshop in Aaron block."
+  }
 ];
 
 export default function Home() {
@@ -102,10 +138,10 @@ export default function Home() {
   const goToCampaign = (index: number) => setCurrentCampaign(index);
 
   return (
-    <div className="flex flex-col bg-zinc-50 dark:bg-slate-950 pt-[48px] md:pt-[72px] min-h-screen">
+    <div className="flex flex-col bg-zinc-50 dark:bg-slate-950 pt-[64px] md:pt-[72px] min-h-screen">
 
       {/* Hero Carousel */}
-      <section className="relative w-full h-[80vh] md:h-[80vh] overflow-hidden mt-0">
+      <section className="relative w-full h-[250px] md:h-[80vh] overflow-hidden mt-0">
         {slides.map((slide, i) => (
           <div
             key={i}
@@ -119,10 +155,10 @@ export default function Home() {
               sizes="100vw"
               quality={90}
               priority={i === 0}
-              className="object-cover"
+              className="object-contain md:object-cover bg-teal-950 object-top md:object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="relative h-full max-w-7xl mx-auto px-6 md:px-8 flex flex-col justify-center items-start space-y-4 md:space-y-6">
+            <div className="relative h-full flex flex-col justify-end items-start space-y-2 md:space-y-3 pb-6 md:pb-10 px-4 md:px-10">
               <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider hover:bg-white/20 transition-all">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
@@ -240,7 +276,7 @@ export default function Home() {
                     Featured Campaign <div className="h-[2px] flex-1 bg-[#bfdbfe]" />
                   </h4>
                   <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden bg-teal-950 group cursor-pointer shadow-xl border-2 md:border-4 border-white hover:shadow-2xl transition-all">
-                    <Image src="/images/home/empowerment-of-women.jpg" alt="Video" fill className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/meetings/meeting1.png" alt="Video" fill className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-14 h-14 md:w-20 md:h-20 bg-rose-600 rounded-full flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-rose-700 transition-all">
                         <Play size={24} className="md:w-8 md:h-8" fill="white" />
@@ -288,17 +324,16 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { name: "Guna Main", bg: "/images/home/image-3.webp" },
-              { name: "Aaron Block", bg: "/images/home/empowerment-of-women.jpg" },
-              { name: "Chachoda", bg: "/images/home/image-4.jpg" },
-              { name: "Raghogarh", bg: "/images/home/image-5.jpg" },
+              { name: "Aaron Block", bg: "/images/meetings/meet1 (1).jpeg" },
+              { name: "Chachoda", bg: "/images/home/banner66.jpg" },
+              { name: "Raghogarh", bg: "/images/awards/award2.webp" },
             ].map((loc, i) => (
               <div key={i} className="relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer min-h-[280px]">
                 <Image src={loc.bg} alt={loc.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-teal-950/80 via-teal-950/40 to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
-                  <MapPin className="mb-3 text-rose-400 group-hover:scale-110 transition-transform" size={32} />
-                  <h5 className="font-black text-xl md:text-2xl group-hover:text-rose-300 transition-colors">{loc.name} Center</h5>
-                  <p className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-teal-200 mt-2">Active Hub</p>
+                <div className="absolute bottom-0 left-0 right-0 p-6 pb-8 bg-gradient-to-t from-teal-950/90 via-teal-950/60 to-transparent text-white text-center">
+                  <MapPin className="mx-auto mb-2 text-rose-400 group-hover:scale-110 transition-transform" size={24} />
+                  <h5 className="font-black text-lg md:text-xl group-hover:text-rose-300 transition-colors">{loc.name} Center</h5>
+                  <p className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-teal-200 mt-1">Active Hub</p>
                 </div>
               </div>
             ))}
@@ -401,30 +436,30 @@ export default function Home() {
           <h3 className="text-2xl md:text-3xl font-black text-teal-950 tracking-tight">Latest from <span className="text-rose-600 italic hover:text-rose-700 transition-colors">the Field</span></h3>
           <div className="h-px flex-1 bg-zinc-200" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {[1, 2, 3].map((i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {fieldReports.map((report, i) => (
             <article key={i} className="group cursor-pointer">
               <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4 md:mb-5 shadow-md group-hover:shadow-xl transition-all">
                 <Image
-                  src={`/images/home/image-5.jpg`}
+                  src={`/images/meetings/${report.image}`}
                   fill
-                  alt="News"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  alt={report.title}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   quality={80}
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-2 md:space-y-3">
                 <div className="flex items-center gap-3 text-[10px] font-bold uppercase text-rose-600 tracking-widest">
-                  <span>May 20, 2026</span>
+                  <span>{report.date}</span>
                   <span className="w-1 h-1 rounded-full bg-zinc-300" />
-                  <span>Field Report</span>
+                  <span>{report.tag}</span>
                 </div>
-                <h4 className="text-base md:text-lg font-black text-teal-950 group-hover:text-rose-600 transition-colors leading-tight">
-                  Republic Day Honors for Area Level Federation
+                <h4 className="text-base md:text-lg font-black text-teal-950 dark:text-white group-hover:text-rose-600 transition-colors leading-tight">
+                  {report.title}
                 </h4>
-                <p className="text-zinc-500 text-xs md:text-sm font-medium line-clamp-2 group-hover:text-zinc-600">
-                  Recognized for 100% implementation of women welfare schemes in remote Guna blocks.
+                <p className="text-zinc-500 dark:text-zinc-400 text-xs md:text-sm font-medium line-clamp-2 group-hover:text-zinc-600">
+                  {report.desc}
                 </p>
               </div>
             </article>
@@ -447,11 +482,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
             </div>
             <div className="md:col-span-1 relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg cursor-pointer">
-              <Image src="/images/home/image-5.jpg" fill alt="Artisans" className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <Image src="/images/meetings/swachhta2.jpeg" fill alt="Swachhta Mission" className="object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
             </div>
             <div className="md:col-span-1 rounded-2xl md:rounded-3xl overflow-hidden relative group shadow-lg cursor-pointer">
-              <Image src="/images/home/image-4.jpg" fill alt="Video thumbnail" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/images/home/banner66.jpg" fill alt="Video thumbnail" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-14 h-14 md:w-16 md:h-16 bg-rose-600 rounded-full flex items-center justify-center text-white shadow-xl group-hover:scale-110 group-hover:bg-rose-700 transition-all">
@@ -463,7 +498,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:col-span-2 relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg cursor-pointer">
-              <Image src="/images/home/empowerment-of-women.jpg" fill alt="Work" className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <Image src="/images/services/soap-1.jpg" fill alt="Herbal Soap Production" className="object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
             </div>
           </div>

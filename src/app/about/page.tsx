@@ -43,6 +43,13 @@ export default function About() {
       icon: <Scale size={24} />
     },
     {
+      id: 5,
+      title: "Awards & Honors",
+      subtitle: "Recognition of Excellence",
+      links: ["/images/awards/awardcertificate1.jpeg", "/images/awards/awardcertificate2.jpeg"],
+      icon: <Award size={24} />
+    },
+    {
       id: 2,
       title: "PAN Card",
       subtitle: "Income Tax Department",
