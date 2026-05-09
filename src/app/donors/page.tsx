@@ -72,34 +72,7 @@ export default function Donors() {
           </div>
         </div>
 
-        {/* Trust & Compliance – Download buttons now functional */}
-        <div className="bg-rose-600 rounded-2xl md:rounded-3xl p-8 md:p-12 lg:p-16 text-white grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-center shadow-xl">
-          <div className="lg:col-span-2 space-y-3 md:space-y-4 text-center lg:text-left">
-            <h4 className="text-2xl md:text-3xl font-black tracking-tight">
-              Transparency for Peace of Mind
-            </h4>
-            <p className="text-rose-100 font-medium text-sm md:text-base">
-              Download our annual impact reports and audit statements. Your trust is our greatest asset.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3">
-            {/* Replace href with actual file paths in /public */}
-            <a
-              href="/reports/annual-report-2024-25.pdf"
-              download
-              className="flex items-center justify-between w-full bg-white/10 hover:bg-white/20 border border-white/20 p-3 md:p-4 rounded-xl md:rounded-2xl font-bold transition-all text-sm md:text-base"
-            >
-              Annual Report 2024-25 <Download size={18} />
-            </a>
-            <a
-              href="/reports/audit-statement.pdf"
-              download
-              className="flex items-center justify-between w-full bg-white/10 hover:bg-white/20 border border-white/20 p-3 md:p-4 rounded-xl md:rounded-2xl font-bold transition-all text-sm md:text-base"
-            >
-              Audit Statement <Download size={18} />
-            </a>
-          </div>
-        </div>
+
       </div>
     </div>
   );

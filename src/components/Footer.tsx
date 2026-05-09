@@ -169,13 +169,13 @@ const Footer = () => {
           <p className="text-zinc-500 text-sm font-bold">
             © {new Date().getFullYear()} Pukar Mahila Mandal. All rights reserved.
           </p>
-          <p className="uppercase tracking-wide text-[10px] text-zinc-500 font-black">
+          <p className="uppercase tracking-widest text-[10px] md:text-xs text-zinc-500 font-black flex items-center gap-2">
             Powered by{" "}
             <a
               href="https://pigo-pi.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-black bg-gradient-to-r from-[#FF0080] via-[#7928CA] to-[#0070F3] bg-clip-text text-transparent hover:opacity-80 transition-all normal-case"
+              className="font-black bg-gradient-to-r from-[#FF0080] via-[#7928CA] to-[#0070F3] bg-clip-text text-transparent hover:opacity-80 transition-all normal-case text-sm md:text-lg"
             >
               PigoPi
             </a>

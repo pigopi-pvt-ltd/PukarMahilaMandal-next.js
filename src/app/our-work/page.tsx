@@ -12,7 +12,8 @@ import {
   CheckCircle2,
   Users,
   TrendingUp,
-  Zap
+  Zap,
+  Activity
 } from "lucide-react";
 
 // --- Define separate carousel images for each service ---
@@ -24,17 +25,24 @@ const garmentImages = [
 ];
 
 const soapImages = [
-  "/images/services/soap-1.jpg",
-  "/images/services/soap-2.jpg",
+  "/images/services/soap-1.JPG",
+  "/images/services/soap-2.JPG",
   "/images/services/soap-3.jpg",
   "/images/services/soap-4.jpg",
+  "/images/services/soap-5.jpg",
+  "/images/services/soap-6.jpg",
 ];
 
 const papadImages = [
-  "/images/services/papad-1.jpg",
-  "/images/services/papad-2.jpg",
-  "/images/services/papad-3.jpg",
-  "/images/services/papad-4.jpg",
+  "/images/services/papad-1.JPG",
+  "/images/services/papad-2.JPG",
+  "/images/services/papad-3.png",
+  "/images/services/papad.jpg",
+];
+
+const healthImages = [
+  "/images/services/health-1.png",
+  "/images/services/health-2.png",
 ];
 
 // Custom hook for carousel state
@@ -53,6 +61,7 @@ export default function OurWork() {
   const garmentCarousel = useCarousel(garmentImages);
   const soapCarousel = useCarousel(soapImages);
   const papadCarousel = useCarousel(papadImages);
+  const healthCarousel = useCarousel(healthImages);
 
   const services = [
     {
@@ -68,7 +77,7 @@ export default function OurWork() {
       bg: "bg-rose-50",
     },
     {
-      title: "Herbal Soap Production",
+      title: "Herbal handmade product production",
       icon: Droplets,
       description: "Sustainable chemistry meeting traditional wellness for eco-conscious consumers.",
       longDescription: "We upcycle floral waste from local temples into premium essential-oil based soaps. This unit teaches scientific formulation and eco-friendly packaging.",
@@ -80,7 +89,7 @@ export default function OurWork() {
       bg: "bg-teal-50",
     },
     {
-      title: "Herbal handmade product production",
+      title: "Handmade food processing",
       icon: UtensilsCrossed,
       description: "Empowering rural households through a decentralized production model. We combine traditional recipes with modern quality control.",
       longDescription: "Our flagship unit in Guna focuses on authentic sun-drying techniques. By providing raw materials to women's doorsteps, we ensure they can balance livelihood with family care.",
@@ -90,6 +99,18 @@ export default function OurWork() {
       carousel: papadCarousel,
       color: "text-orange-600",
       bg: "bg-orange-50",
+    },
+    {
+      title: "Health Awareness & Wellness",
+      icon: Activity,
+      description: "Promoting preventive healthcare and nutritional wellness across rural Guna.",
+      longDescription: "Our health initiatives focus on maternal care, menstrual hygiene, and nutritional awareness. We conduct regular field camps and workshops led by healthcare professionals to ensure the wellbeing of our community.",
+      stats: { beneficiaries: "1,500+ Checked", growth: "Community Wide" },
+      features: ["Maternal Health", "Nutrition Workshops", "Hygiene Kits"],
+      images: healthImages,
+      carousel: healthCarousel,
+      color: "text-emerald-600",
+      bg: "bg-emerald-50",
     },
   ];
 

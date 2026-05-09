@@ -76,9 +76,14 @@ export default function Contact() {
                   <Mail className="text-rose-600" size={32} />
                   <div>
                     <h4 className="font-black text-teal-950 dark:text-slate-100 uppercase text-[10px] tracking-widest mb-1">Email Us</h4>
-                    <a href="mailto:info@pukarmandal.org" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors break-words">
-                      info@pukarmandal.org
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      <a href="mailto:pukarmahilamandalguna@gmail.com" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors break-words text-sm">
+                        pukarmahilamandalguna@gmail.com
+                      </a>
+                      <a href="mailto:rs4038990@gmail.com" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors break-words text-sm">
+                        rs4038990@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="p-8 rounded-[2.5rem] bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100/50 dark:border-teal-900/30 space-y-4 hover:shadow-xl transition-all">

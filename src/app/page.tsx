@@ -323,7 +323,7 @@ export default function Home() {
           <h4 className="text-4xl md:text-5xl font-black text-teal-950 dark:text-slate-100 tracking-tighter mb-12 md:mb-16">Our Institutes.</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { name: "Guna Main", bg: "/images/home/image-3.webp" },
+              { name: "Guna Main", bg: "/images/home/guna_main_production.png" },
               { name: "Aaron Block", bg: "/images/meetings/meet1 (1).jpeg" },
               { name: "Chachoda", bg: "/images/home/banner66.jpg" },
               { name: "Raghogarh", bg: "/images/awards/award2.webp" },
@@ -478,7 +478,7 @@ export default function Home() {
         <div className="w-full px-6 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[280px] md:auto-rows-[320px] max-w-full">
             <div className="md:col-span-2 md:row-span-2 relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg cursor-pointer">
-              <Image src="/images/home/image-3.webp" fill alt="Guna" className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <Image src="/images/home/field_gallery_final.png" fill alt="Pukar Mahila Mandal Project Gallery" className="object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
             </div>
             <div className="md:col-span-1 relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg cursor-pointer">
