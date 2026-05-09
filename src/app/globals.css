@@ -25,6 +25,8 @@ html {
   :root {
     --background: #ffffff;
     --foreground: #09090b;
+    --font-geist-sans: "Inter", system-ui, -apple-system, sans-serif;
+    --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
   .dark {

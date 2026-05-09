@@ -193,13 +193,13 @@ export default function Home() {
             { t: "CSR-01", d: "Regd. NGO", i: Info },
             { t: "2,500+", d: "Women Empowered", i: Star },
           ].map((item, idx) => (
-            <div key={idx} className="flex items-center gap-3 group cursor-pointer">
-              <div className="bg-zinc-50 p-2.5 rounded-xl shadow-sm text-rose-500 group-hover:bg-rose-600 group-hover:text-white transition-all group-hover:scale-110">
-                <item.i size={20} />
+            <div key={idx} className="flex items-center gap-4 group cursor-pointer">
+              <div className="bg-zinc-50 dark:bg-slate-800 p-3 rounded-2xl shadow-sm text-rose-500 group-hover:bg-rose-600 group-hover:text-white transition-all group-hover:scale-110">
+                <item.i size={24} />
               </div>
               <div>
-                <h4 className="font-extrabold text-teal-950 text-xs md:text-sm group-hover:text-rose-600 transition-colors">{item.t}</h4>
-                <p className="text-[9px] uppercase font-bold text-zinc-400 tracking-wider">{item.d}</p>
+                <h4 className="font-black text-teal-950 dark:text-slate-100 text-sm md:text-lg group-hover:text-rose-600 transition-colors leading-tight">{item.t}</h4>
+                <p className="text-[10px] md:text-xs uppercase font-extrabold text-zinc-400 tracking-widest mt-0.5">{item.d}</p>
               </div>
             </div>
           ))}
@@ -222,7 +222,7 @@ export default function Home() {
                 {slides.map((slide, i) => (
                   <Image
                     key={i}
-                    src={slide.image}
+                    src={i === 0 ? "/images/home/mobileview.jpeg" : slide.image}
                     alt="Spotlight"
                     fill
                     className={`object-cover transition-opacity duration-1000 group-hover:scale-105 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
@@ -267,7 +267,7 @@ export default function Home() {
                   <Link href="/donate" className="bg-rose-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest flex items-center gap-2 hover:bg-rose-700 hover:scale-105 transition-all shadow-md">
                     Support a Cause <Heart size={18} fill="white" />
                   </Link>
-                  <Link href="/impact" className="bg-white border-2 border-teal-950 text-teal-950 px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest hover:bg-teal-950 hover:text-white hover:scale-105 transition-all shadow-sm">
+                  <Link href="/our-work" className="bg-white border-2 border-teal-950 text-teal-950 px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest hover:bg-teal-950 hover:text-white hover:scale-105 transition-all shadow-sm">
                     View Impact
                   </Link>
                 </div>

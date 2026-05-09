@@ -61,14 +61,14 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-5">
             <div className="flex gap-3.5 border-r border-white/10 pr-5">
-              <Link href="https://www.facebook.com/NULMMoHUA" className="hover:text-rose-400 transition-all"><FaFacebook size={14} /></Link>
-              <Link href="#" className="hover:text-rose-400 transition-all"><FaInstagram size={14} /></Link>
-              <Link href="#" className="hover:text-rose-400 transition-all"><FaTwitter size={14} /></Link>
+              <Link href="https://www.facebook.com/NULMMoHUA" className="text-[#1877F2] hover:brightness-125 transition-all"><FaFacebook size={14} /></Link>
+              <Link href="#" className="text-[#E4405F] hover:brightness-125 transition-all"><FaInstagram size={14} /></Link>
+              <Link href="#" className="text-[#1DA1F2] hover:brightness-125 transition-all"><FaTwitter size={14} /></Link>
               <a
                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-rose-400 transition-all"
+                className="text-[#25D366] hover:brightness-125 transition-all"
               >
                 <FaWhatsapp size={14} />
               </a>
