@@ -50,16 +50,16 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="hidden lg:grid grid-cols-2 gap-4 w-full max-w-sm">
-              <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl shadow-zinc-200/50 dark:shadow-slate-950/50 border border-zinc-100 dark:border-slate-800 -rotate-3 hover:rotate-0 transition-transform duration-500">
-                <ShieldCheck className="text-teal-600 mb-4" size={32} />
-                <h3 className="font-black text-teal-950 dark:text-slate-100 text-sm uppercase">100% Secure</h3>
-                <p className="text-zinc-400 dark:text-slate-500 text-xs mt-1">Encrypted communication channel.</p>
+            <div className="hidden lg:grid grid-cols-2 gap-8 w-full max-w-lg">
+              <div className="bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl shadow-zinc-200/50 dark:shadow-slate-950/50 border border-zinc-100 dark:border-slate-800 -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <ShieldCheck className="text-teal-600 mb-6" size={48} />
+                <h3 className="font-black text-teal-950 dark:text-slate-100 text-lg uppercase">100% Secure</h3>
+                <p className="text-zinc-400 dark:text-slate-500 text-base mt-2">Encrypted communication channel.</p>
               </div>
-              <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl shadow-zinc-200/50 dark:shadow-slate-950/50 border border-zinc-100 dark:border-slate-800 rotate-6 translate-y-8 hover:rotate-0 hover:translate-y-4 transition-all duration-500">
-                <Globe className="text-rose-600 mb-4" size={32} />
-                <h3 className="font-black text-teal-950 dark:text-slate-100 text-sm uppercase">Regional Hub</h3>
-                <p className="text-zinc-400 dark:text-slate-500 text-xs mt-1">Headquartered in Guna, MP.</p>
+              <div className="bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl shadow-zinc-200/50 dark:shadow-slate-950/50 border border-zinc-100 dark:border-slate-800 rotate-6 translate-y-8 hover:rotate-0 hover:translate-y-4 transition-all duration-500">
+                <Globe className="text-rose-600 mb-6" size={48} />
+                <h3 className="font-black text-teal-950 dark:text-slate-100 text-lg uppercase">Regional Hub</h3>
+                <p className="text-zinc-400 dark:text-slate-500 text-base mt-2">Headquartered in Guna, MP.</p>
               </div>
             </div>
           </div>
