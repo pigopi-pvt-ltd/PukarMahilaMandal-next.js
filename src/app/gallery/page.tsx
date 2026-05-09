@@ -72,11 +72,10 @@ export default function Gallery() {
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
-              className={`px-4 md:px-6 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest transition-all ${
-                activeTab === cat
-                  ? "bg-teal-950 text-white shadow-lg scale-105"
-                  : "bg-zinc-100 text-zinc-500 hover:bg-zinc-200"
-              }`}
+              className={`px-4 md:px-6 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest transition-all ${activeTab === cat
+                ? "bg-teal-950 text-white shadow-lg scale-105"
+                : "bg-zinc-100 text-zinc-500 hover:bg-zinc-200"
+                }`}
             >
               {cat}
             </button>

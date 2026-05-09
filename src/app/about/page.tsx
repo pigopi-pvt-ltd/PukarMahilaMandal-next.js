@@ -70,6 +70,13 @@ export default function About() {
       links: ["/images/documents/Form-10.JPG"],
       icon: <Award size={24} />
     },
+    {
+      id: 6,
+      title: "E-Anudaan",
+      subtitle: "NGO Portal Registration",
+      links: ["/images/anudaan/eanudaan1.png", "/images/anudaan/eanudaan2.png"],
+      icon: <FileText size={24} />
+    },
   ];
 
   return (

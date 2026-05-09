@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -13,6 +16,19 @@ import {
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    const subject = "Newsletter Subscription Request";
+    const body = `Hello Pukar Mahila Mandal,\n\nI would like to subscribe to your newsletter for latest updates and impact stories.\n\nSubscriber Email: ${email}\n\nThank you!`;
+
+    window.location.href = `mailto:pukarmahilamandalguna@gmail.com,rs4038990@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setEmail("");
+  };
+
   return (
     <footer className="bg-zinc-50 dark:bg-slate-950 text-zinc-900 dark:text-white pt-24 pb-12 border-t border-zinc-200 dark:border-white/5 relative overflow-hidden">
       {/* Dynamic Background Elements */}
@@ -32,16 +48,19 @@ const Footer = () => {
             <p className="text-zinc-500 dark:text-zinc-400 font-medium text-sm md:text-base max-w-md">Subscribe to get latest updates from the field and impact stories directly in your inbox.</p>
           </div>
           <div className="w-full lg:w-auto">
-            <div className="flex p-1.5 bg-zinc-100 dark:bg-zinc-950/50 rounded-2xl border border-zinc-200 dark:border-white/10 focus-within:ring-2 ring-rose-500/50 transition-all max-w-md mx-auto">
+            <form onSubmit={handleSubscribe} className="flex p-1.5 bg-zinc-100 dark:bg-zinc-950/50 rounded-2xl border border-zinc-200 dark:border-white/10 focus-within:ring-2 ring-rose-500/50 transition-all max-w-md mx-auto">
               <input
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="bg-transparent border-none px-6 py-3 text-sm font-bold outline-none w-full text-zinc-900 dark:text-white"
               />
-              <button className="bg-rose-600 hover:bg-rose-700 text-white p-3 rounded-xl transition-all shadow-lg shadow-rose-600/20 active:scale-95">
+              <button type="submit" className="bg-rose-600 hover:bg-rose-700 text-white p-3 rounded-xl transition-all shadow-lg shadow-rose-600/20 active:scale-95">
                 <Send size={18} />
               </button>
-            </div>
+            </form>
             <p className="text-[10px] text-zinc-400 mt-4 text-center lg:text-left font-bold uppercase tracking-widest">No spam, only impact stories.</p>
           </div>
         </div>

@@ -1,15 +1,39 @@
+"use client";
+
+import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    reason: "General Support",
+    message: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const whatsappNumber = "919131931137";
+    const text = `*New Inquiry from Pukar Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Reason:* ${formData.reason}%0A*Message:* ${formData.message}`;
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text.replace(/%0A/g, '\n'))}`, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 selection:bg-rose-100 pt-[64px] md:pt-[88px] pb-24">
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative py-16 md:py-24 overflow-hidden border-b border-zinc-100 dark:border-slate-800 bg-zinc-50/50 dark:bg-slate-900/50">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rose-100/30 dark:bg-rose-900/10 rounded-full blur-[120px] -mr-64 -mt-64" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-100/20 dark:bg-teal-900/10 rounded-full blur-[120px] -ml-64 -mb-64" />
-        
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl space-y-6 text-center md:text-left">
@@ -25,7 +49,7 @@ export default function Contact() {
                 Whether you're looking to volunteer, partner with our units in Guna, or simply want to learn more about our movement—we're just a message away.
               </p>
             </div>
-            
+
             <div className="hidden lg:grid grid-cols-2 gap-4 w-full max-w-sm">
               <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl shadow-zinc-200/50 dark:shadow-slate-950/50 border border-zinc-100 dark:border-slate-800 -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <ShieldCheck className="text-teal-600 mb-4" size={32} />
@@ -45,7 +69,7 @@ export default function Contact() {
       {/* --- CONTACT GRID --- */}
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          
+
           {/* LEFT: INFO PANELS */}
           <div className="lg:col-span-5 space-y-12">
             <div className="space-y-4">
@@ -72,29 +96,29 @@ export default function Contact() {
 
               {/* Direct Contact */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-8 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-900/10 border border-rose-100/50 dark:border-rose-900/30 space-y-4 hover:shadow-xl transition-all">
+                <div className="py-8 px-4 md:px-5 rounded-[2.5rem] bg-rose-50/50 dark:bg-rose-900/10 border border-rose-100/50 dark:border-rose-900/30 space-y-4 hover:shadow-xl transition-all">
                   <Mail className="text-rose-600" size={32} />
                   <div>
                     <h4 className="font-black text-teal-950 dark:text-slate-100 uppercase text-[10px] tracking-widest mb-1">Email Us</h4>
                     <div className="flex flex-col gap-1">
-                      <a href="mailto:pukarmahilamandalguna@gmail.com" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors break-words text-sm">
+                      <a href="mailto:pukarmahilamandalguna@gmail.com" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors text-[9px] lg:text-[11px]">
                         pukarmahilamandalguna@gmail.com
                       </a>
-                      <a href="mailto:rs4038990@gmail.com" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors break-words text-sm">
+                      <a href="mailto:rs4038990@gmail.com" className="text-rose-900 dark:text-rose-400 font-bold hover:text-rose-600 transition-colors text-[9px] lg:text-[11px]">
                         rs4038990@gmail.com
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="p-8 rounded-[2.5rem] bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100/50 dark:border-teal-900/30 space-y-4 hover:shadow-xl transition-all">
+                <div className="py-8 px-4 md:px-5 rounded-[2.5rem] bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100/50 dark:border-teal-900/30 space-y-4 hover:shadow-xl transition-all">
                   <Phone className="text-teal-700" size={32} />
                   <div>
                     <h4 className="font-black text-teal-950 dark:text-slate-100 uppercase text-[10px] tracking-widest mb-1">Call Support</h4>
                     <div className="flex flex-col gap-1">
-                      <a href="tel:+919131931137" className="text-teal-950 dark:text-slate-200 font-bold hover:text-teal-600 transition-colors">
+                      <a href="tel:+919131931137" className="text-teal-950 dark:text-slate-200 font-bold hover:text-teal-600 transition-colors text-[9px] lg:text-[11px]">
                         +91 91319 31137
                       </a>
-                      <a href="tel:+919685070307" className="text-teal-950 dark:text-slate-200 font-bold hover:text-teal-600 transition-colors">
+                      <a href="tel:+919685070307" className="text-teal-950 dark:text-slate-200 font-bold hover:text-teal-600 transition-colors text-[9px] lg:text-[11px]">
                         +91 96850 70307
                       </a>
                     </div>
@@ -114,21 +138,29 @@ export default function Contact() {
           <div className="lg:col-span-7">
             <div className="bg-white dark:bg-slate-900 rounded-[3rem] p-8 md:p-12 border border-zinc-100 dark:border-slate-800 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 dark:bg-rose-950/20 rounded-full blur-3xl -mr-16 -mt-16" />
-              
-              <form className="relative z-10 space-y-8">
+
+              <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-slate-500 ml-1">Full Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="e.g. Aditi Sharma"
                       className="w-full bg-zinc-50 dark:bg-slate-800 border border-zinc-100 dark:border-slate-700 rounded-2xl px-6 py-4 text-teal-950 dark:text-slate-100 focus:ring-2 focus:ring-rose-500 focus:bg-white dark:focus:bg-slate-700 outline-none transition-all placeholder:text-zinc-300 dark:placeholder:text-slate-600"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-slate-500 ml-1">Email Address</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="name@email.com"
                       className="w-full bg-zinc-50 dark:bg-slate-800 border border-zinc-100 dark:border-slate-700 rounded-2xl px-6 py-4 text-teal-950 dark:text-slate-100 focus:ring-2 focus:ring-rose-500 focus:bg-white dark:focus:bg-slate-700 outline-none transition-all placeholder:text-zinc-300 dark:placeholder:text-slate-600"
                     />
@@ -137,24 +169,34 @@ export default function Contact() {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-slate-500 ml-1">Reason for Inquiry</label>
-                  <select className="w-full bg-zinc-50 dark:bg-slate-800 border border-zinc-100 dark:border-slate-700 rounded-2xl px-6 py-4 text-teal-950 dark:text-slate-100 focus:ring-2 focus:ring-rose-500 outline-none appearance-none cursor-pointer">
+                  <select
+                    name="reason"
+                    value={formData.reason}
+                    onChange={handleChange}
+                    className="w-full bg-zinc-50 dark:bg-slate-800 border border-zinc-100 dark:border-slate-700 rounded-2xl px-6 py-4 text-teal-950 dark:text-slate-100 focus:ring-2 focus:ring-rose-500 outline-none appearance-none cursor-pointer"
+                  >
                     <option>General Support</option>
                     <option>Volunteer Opportunities</option>
                     <option>Donation & 80G Benefits</option>
                     <option>Media & Partnerships</option>
+                    <option>Other</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-slate-500 ml-1">Your Message</label>
-                  <textarea 
+                  <textarea
                     rows={4}
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell us how we can help..."
                     className="w-full bg-zinc-50 dark:bg-slate-800 border border-zinc-100 dark:border-slate-700 rounded-2xl px-6 py-4 text-teal-950 dark:text-slate-100 focus:ring-2 focus:ring-rose-500 focus:bg-white dark:focus:bg-slate-700 outline-none transition-all resize-none placeholder:text-zinc-300 dark:placeholder:text-slate-600"
                   ></textarea>
                 </div>
 
-                <button 
+                <button
                   type="submit"
                   className="w-full bg-teal-950 text-white py-5 rounded-2xl font-black text-lg hover:bg-rose-600 transition-all shadow-xl shadow-teal-900/20 hover:shadow-rose-500/20 flex items-center justify-center gap-3 group"
                 >
@@ -179,8 +221,8 @@ export default function Contact() {
                 <h3 className="text-2xl font-black text-teal-950 dark:text-slate-100 tracking-tight">Our Guna Hub</h3>
                 <p className="text-zinc-500 dark:text-slate-400 font-medium mt-1">Conveniently located in Guna, managing operations across 50+ village units.</p>
               </div>
-              <Link 
-                href="https://maps.google.com" 
+              <Link
+                href="https://maps.google.com"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-teal-950 text-white px-8 py-3 rounded-full font-bold hover:bg-rose-600 transition-all"
               >
