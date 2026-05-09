@@ -498,7 +498,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:col-span-2 relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg cursor-pointer">
-              <Image src="/images/services/soap-1.jpg" fill alt="Herbal Soap Production" className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <Image src="/images/services/soap-1.JPG" fill alt="Herbal Soap Production" className="object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
             </div>
           </div>
