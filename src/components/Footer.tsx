@@ -30,7 +30,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-zinc-50 dark:bg-slate-950 text-zinc-900 dark:text-white pt-24 pb-12 border-t border-zinc-200 dark:border-white/5 relative overflow-hidden">
+    <footer className="bg-zinc-50 dark:bg-slate-950 text-zinc-900 dark:text-white pt-12 md:pt-24 pb-8 md:pb-12 border-t border-zinc-200 dark:border-white/5 relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-rose-500/5 blur-[120px] rounded-full -translate-y-1/2 opacity-50" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-teal-500/5 blur-[150px] rounded-full translate-y-1/3 translate-x-1/3" />
@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
 
         {/* Newsletter Section */}
-        <div className="bg-white dark:bg-slate-900/50 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-[2rem] p-8 md:p-12 mb-20 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-white dark:bg-slate-900/50 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-[2rem] p-8 md:p-12 mb-10 md:mb-20 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="space-y-4 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-rose-600/10 text-rose-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-rose-500/10">
               <Zap size={12} fill="currentColor" /> Stay Updated
@@ -65,10 +65,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16 mb-10 md:mb-20">
 
           {/* About Section */}
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-8">
             <div className="relative h-20 w-64 -ml-4 group cursor-pointer">
               <Image
                 src="/mahila.png"
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="hidden md:block">
             <h4 className="text-teal-950 dark:text-white font-black uppercase tracking-widest text-xs mb-8 flex items-center gap-3">
               Organization <div className="h-[2px] w-8 bg-teal-500 rounded-full" />
             </h4>
@@ -115,10 +115,10 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-teal-950 dark:text-white font-black uppercase tracking-widest text-xs mb-8 flex items-center gap-3">
+            <h4 className="text-teal-950 dark:text-white font-black uppercase tracking-widest text-xs mb-4 md:mb-8 flex items-center gap-3">
               Headquarters <div className="h-[2px] w-8 bg-rose-600 rounded-full" />
             </h4>
-            <ul className="space-y-6">
+            <ul className="space-y-3 md:space-y-6">
               <li className="flex items-start gap-4 group">
                 <div className="bg-white dark:bg-zinc-900 p-2.5 rounded-xl text-rose-500 border border-zinc-100 dark:border-none group-hover:bg-rose-600 group-hover:text-white transition-all shadow-md">
                   <MapPin size={18} />
@@ -154,10 +154,10 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-teal-950 dark:text-white font-black uppercase tracking-widest text-xs mb-8 flex items-center gap-3">
+            <h4 className="text-teal-950 dark:text-white font-black uppercase tracking-widest text-xs mb-4 md:mb-8 flex items-center gap-3">
               Field Stories <div className="h-[2px] w-8 bg-violet-600 rounded-full" />
             </h4>
-            <p className="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">Connect with our journey</p>
+            <p className="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em] mb-4 md:mb-6">Connect with our journey</p>
             <div className="grid grid-cols-4 gap-3">
               {[
                 { icon: FaFacebook, href: "#", color: "hover:bg-[#1877F2]" },
@@ -174,7 +174,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className="mt-8 p-4 bg-white dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-white/5">
+            <div className="mt-3 md:mt-8 p-4 bg-white dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-white/5">
               <div className="flex items-center gap-3">
                 <Globe size={16} className="text-rose-500 animate-pulse" />
                 <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Guna District Federation</span>
@@ -184,7 +184,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-zinc-200 dark:border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <div className="border-t border-zinc-200 dark:border-white/5 pt-4 md:pt-10 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-6 text-center md:text-left">
           <p className="text-zinc-500 text-sm font-bold">
             © {new Date().getFullYear()} Pukar Mahila Mandal. All rights reserved.
           </p>
